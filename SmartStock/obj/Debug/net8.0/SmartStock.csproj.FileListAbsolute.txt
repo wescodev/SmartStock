@@ -64,3 +64,4 @@ C:\Users\wesle\source\repos\SmartStock\SmartStock\obj\Debug\net8.0\refint\SmartS
 C:\Users\wesle\source\repos\SmartStock\SmartStock\obj\Debug\net8.0\SmartStock.pdb
 C:\Users\wesle\source\repos\SmartStock\SmartStock\obj\Debug\net8.0\SmartStock.genruntimeconfig.cache
 C:\Users\wesle\source\repos\SmartStock\SmartStock\obj\Debug\net8.0\ref\SmartStock.dll
+C:\Users\wesle\source\repos\SmartStock\SmartStock\obj\Debug\net8.0\SmartStock.sourcelink.json

@@ -3,7 +3,6 @@ using Microsoft.Data.SqlClient;
 using SmartStock;
 using SmartStock.Screens.ClientScreen;
 using SmartStock.Screens.ProductScreen;
-using SmartStock.Screens.ReportScreen;
 using SmartStock.Screens.SaleScreen;
 
 class Program
@@ -32,7 +31,6 @@ class Program
         Console.WriteLine("1 - Gestão de clientes");
         Console.WriteLine("2 - Gestão de produtos");
         Console.WriteLine("3 - Gestão de vendas");
-        Console.WriteLine("4 - Relatórios");
         Console.WriteLine();
         Console.WriteLine();
 
@@ -49,9 +47,6 @@ class Program
             case 3:
                 MenuSaleScreen.Load();
                 break;               
-            case 4:
-                MenuReportScreen.Load();
-                break;
             default: Load(); break;
         }
     }

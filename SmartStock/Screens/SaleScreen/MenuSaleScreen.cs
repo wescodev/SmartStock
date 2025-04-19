@@ -16,10 +16,9 @@ public class MenuSaleScreen
         Console.WriteLine("--------------");
         Console.WriteLine("O que deseja fazer?");
         Console.WriteLine();
-        Console.WriteLine("1 - Registrar nova venda"); //ok
+        Console.WriteLine("1 - Registrar nova venda"); 
         Console.WriteLine("2 - Consultar vendas por cliente");
         Console.WriteLine("3 - Consultar vendas por período");
-        Console.WriteLine("4 - Detalhar uma venda");
         Console.WriteLine();
 
         var option = short.Parse(Console.ReadLine());
@@ -27,16 +26,13 @@ public class MenuSaleScreen
         switch (option)
         {
             case 1:
-                CreateSaleScreen.Load(); //ok
+                CreateSaleScreen.Load(); 
                 break;
             case 2:
                 SaleByCustomer.Load();
                 break;
             case 3:
                 SaleByPeriod.Load();
-                break;
-            case 4:
-                SaleDetail.Load();
                 break;
             default: Load(); break;
         }

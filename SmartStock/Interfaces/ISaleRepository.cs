@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace SmartStock.Interfaces
 {
-    public interface ISaleRepository 
+    public interface ISaleRepository
     {
-        IEnumerable<dynamic> GetSalesByClient(string cpf);  
-        IEnumerable<Sale> GetSalesByPeriod(DateTime startDate, DateTime endDate);  
-        Sale GetSaleDetails(int saleId);
+        IEnumerable<dynamic> GetSalesByClient(string cpf);
+        IEnumerable<dynamic> GetSalesByPeriod(DateTime startDate, DateTime endDate);
         int InsertSale(Sale sale);
     }
+
 }

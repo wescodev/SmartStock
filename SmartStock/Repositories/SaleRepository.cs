@@ -20,10 +20,6 @@ public class SaleRepository : ISaleRepository
     {
         _connection = connection;
     }
-    public Sale GetSaleDetails(int saleId)
-    {
-        throw new NotImplementedException();
-    }
 
     public IEnumerable<dynamic> GetSalesByClient(string cpf)
     {
@@ -33,14 +29,13 @@ public class SaleRepository : ISaleRepository
             commandType: CommandType.StoredProcedure);
     }
 
-    public IEnumerable<Sale> GetSalesByClient(int clientId)
-    {
-        throw new NotImplementedException();
-    }
 
-    public IEnumerable<Sale> GetSalesByPeriod(DateTime startDate, DateTime endDate)
+    public IEnumerable<dynamic> GetSalesByPeriod(DateTime startDate, DateTime endDate)
     {
-        throw new NotImplementedException();
+        return _connection.Query(
+            "ListarVendasPorPeriodo",
+            new { StartDate = startDate, EndDate = endDate },
+            commandType: CommandType.StoredProcedure);
     }
 
     public int InsertSale(Sale sale)
@@ -50,4 +45,6 @@ public class SaleRepository : ISaleRepository
                     SELECT CAST(SCOPE_IDENTITY() AS INT);";
         return _connection.QuerySingle<int>(sql, sale);
     }
+
+
 }
